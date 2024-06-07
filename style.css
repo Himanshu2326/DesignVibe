@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orangeShade: #e65437;
+    --headingShade: #0d1442;
+    --paraShade: #57596a;
+    --lightBrownShade: #e16249;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+/* 
+=========================
+? => Repeatable Css :-  
+=========================
+*/
+
+.d-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.px-7 {
+    padding: 0 7rem;
+}
+
+.mx-3 {
+    margin: 3rem 0;
+}
+
+.Main-heading {
+    color: var(--headingShade);
+    font-size: 2.5rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+
+.h3-heading {
+    color: var(--paraShade);
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: "Josefin Sans", sans-serif;
+
+}
+
+
+/* 
+=========================
+? => Navbar Css :-  
+=========================
+*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    background-color: transparent;
+    font-family: "Josefin Sans", sans-serif;
+
+
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(34, 34, 34);
+    font-size: 1.1rem;
+}
+
+.navbar a li {
+    list-style: none;
+    
+}
+
+.navbar a li:hover{
+    color: white;
+    background: var(--headingShade);
+    padding: 10px 12px;
+    border-radius: 7px;
+    transition: .3s;
+}
+.navbar .Logo a {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.navbar .Links ul a {
+    padding: 0 1rem;
+}
+
+.navbar .signup a {
+    padding-right: 1rem;
+}
+
+
+
+
+/* 
+==============================
+? => First Hero Section Css:-  
+==============================
+*/
+
+.main_section {
+    background: url(./Images/HomeBg.jpg) center center / cover;
+    height: 100vh;
+}
+
+.Hero_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Josefin Sans", sans-serif;
+
+}
+
+.Hero_container h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    width: 65%;
+    text-align: center;
+}
+
+.Hero_container h2 {
+    font-weight: 300;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+
+/* 
+=========================
+? => Second Section Css:-  
+=========================
+*/
+
+.second_Section {
+    flex-direction: column;
+}
+
+.second_Section .Section-Heading {
+    flex-direction: column;
+}
+
+.second_Section .Cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    place-items: center;
+    margin: 3rem 0;
+}
+
+.second_Section .Cards .card {
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    max-width: 80%;
+    border-radius: 35px;
+    padding: 1rem 4rem;
+    font-family: "Poppins", sans-serif;
+    transition: .2s;
+    background: white;
+    transition: .2s;
+}
+
+.second_Section .Cards .card:hover {
+    box-shadow: 0px 0px 9px 0px #e3e3e3;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.second_Section .Cards .card:hover::before {
+    content: '';
+    position: absolute;
+    background: var(--headingShade);
+    height: 6rem;
+    width: 6rem;
+    transition: .2s;
+    bottom: -8%;
+    left: -8%;
+    z-index: -1;
+    border-radius: 30px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 0;
+}
+
+
+.second_Section .Cards .card h4 {
+    color: var(--headingShade);
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+.second_Section .Cards .card p {
+    color: var(--paraShade);
+    font-size: 0.9rem;
+    max-width: 14rem;
+    font-weight: 500;
+}
+
+.second_Section .Cards .card img {
+    height: 25rem;
+    width: 18rem;
+    border-radius: 10px;
+}
+
+
+
+
+/* 
+=========================
+? => Third Section Css:-  
+=========================
+*/
+
+.third_Section {
+    flex-direction: column;
+    height: 100vh;
+    background: url('Images/Gallery.png') center center/cover;
+}
+
+.The_Gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.The_Gallery h2 {
+    font-size: 4rem;
+    font-weight: 300;
+    margin: 2rem 0;
+}
+
+.The_Gallery p {
+    font-size: 1.5rem;
+    width: 45%;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.The_Gallery button {
+    padding: 12px 4rem;
+    border: none;
+    border-radius: 3px;
+    font-family: "Josefin Sans", sans-serif;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+
+/* 
+=============================
+? => Fourth Section Css:-  
+=============================
+*/
+
+.fourth_Section {
+    margin-top: 5rem;
+    justify-content: space-around;
+}
+
+/*? Left Side  */
+
+.fourth_Section .Left_Text_Area .Top_Text h4 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--paraShade);
+}
+
+.fourth_Section .Left_Text_Area .Top_Text h2 {
+    max-width: 60%;
+    margin: 1rem 0;
+}
+
+.fourth_Section .Left_Text_Area .Mini_Cards .mini_card {
+    display: flex;
+    align-items: center;
+    max-width: 60%;
+    font-family: "Poppins", sans-serif;
+    margin: 1.5rem 0px;
+}
+
+.fourth_Section .Left_Text_Area .Mini_Cards .mini_card .text {
+    margin: 0 1rem;
+}
+
+.fourth_Section .Left_Text_Area .Mini_Cards .mini_card h5 {
+    color: var(--paraShade);
+    font-size: 0.9rem;
+}
+
+.fourth_Section .Left_Text_Area .Mini_Cards .mini_card p {
+    color: var(--paraShade);
+    font-size: 0.75rem;
+}
+
+
+/*? Right Side  */
+
+.fourth_Section .Right_Image_Area {
+    position: relative;
+}
+
+.fourth_Section .Right_Image_Area .Card {
+    box-shadow: -2px 7px 10px 0px rgb(238 238 238);
+    border-radius: 20px;
+    height: 21rem;
+    width: 19rem;
+    background: white;
+}
+
+.fourth_Section .Right_Image_Area .Card::before {
+    content: "";
+    position: absolute;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    background: rgb(195, 230, 252);
+    right: -15%;
+    top: -15%;
+    z-index: -1;
+}
+
+.fourth_Section .Right_Image_Area .Card img {
+    border-radius: 20px;
+    padding: 1.5rem;
+    height: 220px;
+}
+
+.fourth_Section .mini_card img {
+    height: 45px;
+    width: 80px;
+    border-radius: 6px;
+}
+
+
+.fourth_Section .Right_Image_Area .Card .text {
+    padding: 0rem 1.5rem;
+}
+
+.fourth_Section .Right_Image_Area .Card .text div p {
+    margin-right: 1.5rem;
+}
+
+.fourth_Section .Right_Image_Area .Card .text h6 {
+    font-family: "Poppins", sans-serif;
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.fourth_Section .Right_Image_Area .Card .text div,
+.fourth_Section .Right_Image_Area .Card .text .icons,
+.fourth_Section .Right_Image_Area .Card .text .people {
+    display: flex;
+    color: var(--paraShade);
+    font-family: "Poppins", sans-serif;
+}
+
+.fourth_Section .Right_Image_Area .Card .text .icons {
+    margin: 15px 0;
+}
+
+.fourth_Section .Right_Image_Area .Card .text .icons span {
+    padding: 5px 9px;
+    box-shadow: 0px 0px 5px 0px rgb(224 224 224);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+.fourth_Section .Right_Image_Area h6 {
+    color: var(--paraShade);
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+}
+
+.fourth_Section .Right_Image_Area h5 {
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+/* 
+=============================
+? => Fifth Section Css:-  
+=============================
+*/
+
+
+.fifth_Section {
+    margin: 5rem 0;
+    justify-content: space-around;
+}
+
+.fifth_Section .Left_Area h4 {
+    font-weight: 600;
+    color: var(--paraShade);
+}
+
+.fifth_Section .Left_Area .text {
+    margin-bottom: 5rem;
+}
+
+.fifth_Section .Left_Area .dots {
+    display: flex;
+    align-items: center;
+}
+
+.fifth_Section .Left_Area .dots span:nth-child(1) {
+    background: var(--paraShade);
+}
+
+.fifth_Section .Left_Area .dots span {
+    height: 10px;
+    margin-right: 15px;
+    width: 10px;
+    border-radius: 50%;
+    background: rgb(201, 201, 201);
+}
+
+.fifth_Section .Right_Area .Feedback-Cards .card {
+    width: 28rem;
+    box-shadow: 5px 5px 15px 0px #dcdcdc;
+    padding: 2rem 1.8rem;
+    font-family: "Poppins", sans-serif;
+    color: var(--paraShade);
+    border-radius: 10px;
+    position: relative;
+}
+
+
+.fifth_Section .Right_Area .Feedback-Cards .card p {
+    margin-bottom: 2rem;
+    width: 90%;
+    font-size: 0.9rem;
+}
+
+.fifth_Section .Right_Area .Feedback-Cards .card h5 {
+    font-size: 1rem;
+}
+
+.fifth_Section .Right_Area .Feedback-Cards .card h6 {
+    font-weight: 500;
+}
+
+.fifth_Section .Right_Area .Feedback-Cards .image {
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    border-radius: 50%;
+}
+
+
+.fifth_Section .Right_Area .Feedback-Cards .image img {
+    height: 50px;
+}
+
+
+/* 
+============================
+? => Sixth Section Css:-
+============================
+*/
+
+
+.sixth_Section .Suscribe-Box {
+    position: relative;
+    background: #f1eeff;
+    flex-direction: column;
+    height: 20rem;
+    border-radius: 20px;
+    border-top-left-radius: 7rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.sixth_Section .Suscribe-Box h2 {
+    color: #5d6282;
+    margin-bottom: 4rem;
+    width: 60%;
+    font-weight: 600;
+    text-align: center;
+}
+
+.sixth_Section form{
+    display: flex;
+}
+
+.sixth_Section .Suscribe-Box input,textarea {
+    height: 3rem;
+    border: none;
+    box-shadow: 0px 0px 3px 0px #d4d4d4;
+    border-radius: 5px;
+    width: 22rem;
+    font-family: "Poppins", sans-serif;
+    padding: 1rem;
+    margin-right: 1rem;
+}
+.sixth_Section .Suscribe-Box label{
+    display: flex;
+    align-items: center;
+}
+.sixth_Section .Suscribe-Box button {
+    background: #ff7b59;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.sixth_Section .Suscribe-Box .circle {
+    position: absolute;
+    color: white;
+    background: linear-gradient(to right, #6551e6, #816ffb);
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    top: -8%;
+    right: -2%;
+}
+
+
+/* 
+============================
+? => Footer Css:-
+============================
+ */
+
+footer {
+    height: 20rem;
+}
+
+footer {
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+
+}
+
+footer .Info {
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+}
+
+footer .Info h2 {
+    margin-bottom: 1.2rem;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+footer .Info .logo {
+    max-width: 12rem;
+}
+
+footer .Info .logo h2 {
+    font-weight: 500;
+    font-size: 2.2rem;
+    color: var(--headingShade);
+}
+
+footer .Info .Links a {
+    margin-bottom: 0.4rem;
+}
+
+footer .Info .logo p {
+    font-size: 0.9rem;
+}
+
+footer .Links {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .Links a {
+    text-decoration: none;
+    color: var(--paraShade);
+    font-weight: 500;
+}
+
+footer .socials-Links .socials {
+    margin: 1rem 0;
+}
+
+footer .socials-Links .socials a {
+    color: black;
+    box-shadow: 0px 0px 5px 0px #d4d4d4;
+    padding: 0.5rem 0.9rem;
+    margin-right: 0.5rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+footer .end {
+    color: var(--paraShade);
+    font-weight: 500;
+}
